@@ -1,11 +1,13 @@
-Tyler Fraking
-SQL Practice - store.sqlite3
+# Tyler Fraking
+# SQL Practice - store.sqlite3
 
-EXPLORER MODE
+## EXPLORER MODE
 
 How many users are there?
-select count(*) from users;
-50
+
+select count(\*) from users;
+
+**50**
 
 What are the 5 most expensive items?
 select title from items order by price desc limit 5;
@@ -58,7 +60,7 @@ insert into orders (user_id, item_id, quantity, created_at) values (51, 42, 9001
 
 ^(Putting date('now') did not include the time, only the date.)
 
-ADVENTURER MODE
+## ADVENTURER MODE
 
 What item was ordered most often?
 select title, quantity from orders inner join items where item_id == items.id order by quantity desc limit 2;
